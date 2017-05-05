@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <title>优惠详情</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/main.css?33">
+    <style>
+        body{
+            background-color: #bb0000;
+        }
+    </style>
+</head>
+<body>
+<section class="coupon-wrapper">
+    <!--周年庆汇总页面主体 start-->
+    <div class="ihma-bg">
+        <div class="num-signup">已有<b class="count-num">8</b>人报名</div>
+        <div class="ihma-container free-container">
+            <h2>先之定制抱枕入手秘诀</h2>
+            <img src="img/bz1.png" alt="">
+            <div class="coupon-desc">
+                <em>01</em>
+                <p>凡在此页面填写报名信息的用户，报名的排名为前3名以及排名中带有数字“8”的用户免费获得一个抱枕；</p>
+            </div>
+            <div class="coupon-desc">
+                <em>02</em>
+                <p>抱枕限量100个，先填先得；</p>
+            </div>
+            <div class="coupon-desc">
+                <em>03</em>
+                <p>分享给好友，让朋友祝您一臂之力，获取带“8”的排名；</p>
+            </div>
+            <div class="coupon-desc">
+                <em>04</em>
+                <p>该活动仅受益于酒店人，抱枕仅邮寄到对应酒店地址；</p>
+            </div>
+            <div class="coupon-desc">
+                <em>05</em>
+                <p>满足条件获得抱枕的用户，客服人员会与您取得联系，抱枕将尽快会为您寄出。</p>
+            </div>
+
+            <div class="footer-btn">
+                <a class="js-formInfo-btn">填写信息</a>
+                <a href="coupon.html" class="back">返回</a>
+            </div>
+        </div>
+        <div class="index-intro ihma-intro">
+            <span class="js-ihma">IHMA职业资格认证&gt;</span>
+        </div>
+    </div>
+
+    <!--填写信息框 start-->
+    <div class="formInfo-container js-formInfo-container">
+        <div class="info-top">
+            <img src="img/info_icon_03.png" alt="">
+            <span>请填写以下信息，我们将把抱枕寄到您所在的酒店~</span>
+        </div>
+        <form action="">
+            <div class="js-username"><label for="">姓名：</label><input type="text" id="username" maxlength="16" name=""><p class="error-info"></p></div>
+            <div class="js-phone"><label for="">手机：</label><input type="tel" id="phone" maxlength="11" name=""><p class="error-info"></p></div>
+            <div class="js-address"><label for="">地址：</label><input type="text" id="address" maxlength="35" placeholder="该信息为酒店地址" name=""><p class="error-info"></p></div>
+            <div class="footer-btn">
+                <button type="button" class="jscancel">取消</button>
+                <button type="submit" class="js-apply">申请</button>
+            </div>
+        </form>
+    </div>
+    <div class="error-popup">
+        请将信息填写完整哦~
+    </div>
+    <!--填写信息 end-->
+
+    <!--申请结果 提示框 前三 或者 报名排列带“8” start-->
+    <div class="formInfo-container js-success">
+        <div class="success-info">
+            <h2>恭喜，</h2>
+            您是<b>第88位</b>报名成功的！
+            <div class="footer-btn">
+                <button type="button" class="btn-ok jscancel">确定</button>
+            </div>
+        </div>
+
+    </div>
+    <!--申请结果 end-->
+
+    <!--申请结果 提示框 非前三 或者 报名排列不带“8” start-->
+    <div class="formInfo-container preorder js-presuccess">
+        <div class="success-info">
+            您是<b>第97位</b>报名成功的，
+            <p>分享给好友，获取“8”的排名。</p>
+            <div class="footer-btn">
+                <button type="button" class="btn-ok jscancel">确定</button>
+            </div>
+        </div>
+
+    </div>
+    <!--申请结果 end-->
+
+    <!--周年庆汇总页面主体 end-->
+    <!--cover-overlay start-->
+    <div class="cover-overlay js-cover-overlay"></div>
+    <!--cover-overlay end-->
+    <!--IHMA介绍 start-->
+    <div class="ihma-container js-ihma-container">
+        <h2>IHMA是什么？</h2>
+        <p>
+            IHMA是全球酒店业职业经理人互动交流的非营利性国际组织机构，以促进饭店经理人职业发展与行业繁荣为己任。IHMA会定期举办资源分享会，在提升个人价值的同时，打造属于自己的优质人脉圈，在中国已有4万余名酒店人加入IHMA。
+        </p>
+        <h2>IHMA职业资格认证是什么？</h2>
+        <p>
+            IHMA根据酒店各个岗位职责，以岗位胜任力为标准，制定了督导、经理、总监、高级四大类职业经理人认证，25款职业资格认证，对于考核通过的职业经理人颁发国际饭店业职业经理人协会认证证书。
+        </p>
+        <p>
+            调研20000多家酒店，320000余名酒店职业经理人，研究酒店数余载，更懂您的需求。
+            截止2016年5月，已有82%的学员通过IHMA职资认证获得了职位提升及薪资上升！
+        </p>
+        <span class="close-icon js-close-icon">×</span>
+    </div>
+    <!--IHMA介绍 end-->
+</section>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/ihmaMain.js"></script>
+</html>

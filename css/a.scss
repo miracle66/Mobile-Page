@@ -1,0 +1,82 @@
+$blue : #1875e7;
+a{
+  color:#f00;
+  border:1px solid #000;
+  &:hover{
+    color:#333;
+    background: #0cc1f5;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+}
+div{
+ color: $blue;
+  background: #000000;
+  position: relative;
+  display: block;
+}
+.class1{
+  border:1px solid #f00;
+}
+.class2{
+  @extend .class1;
+  margin:10px;
+}
+@mixin a{
+  margin:10px 0;
+}
+.b{
+  @include a;
+}
+@mixin a($value: 10px){
+  margin-right: $value;
+  border:1px solid #333333;
+}
+.b{
+  @include a(20px);
+}
+
+p{
+  @if 1 + 1 == 2{
+    border:1px solid;
+  }
+  @if 5 < 3{
+    border:2px dashed;
+  }
+}
+
+p{
+  @if 5 < 3{
+    border:2px dashed;
+  } @else {
+    border:1px solid;
+  }
+}
+
+@for $i from 1 to 10 {
+  .border-#{$i} {
+    border: #{$i}px solid blue;
+  }
+}
+
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} { width: 2em * $i; }
+  $i: $i - 2;
+}
+
+@function double($n) {
+  @return $n * 2;
+}
+#sidebar {
+  width: double(5px);
+}
+
+#main{
+  a{
+    color: #000;
+    &:hover{
+      color: #ff0000;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <title>优惠详情</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body{
+            background-color: #2589de;
+        }
+    </style>
+</head>
+<body>
+<section class="coupon-wrapper lms-coupon">
+    <!--周年庆汇总页面主体 start-->
+    <div class="ihma-bg">
+        <div class="ihma-container free-container">
+            <h2>1元预购得抱枕秘诀</h2>
+            <img src="img/bz1.png" alt="">
+            <div class="coupon-desc">
+                <em>01</em>
+                <p>用户若有意向购买LMS任意一款套餐，只需支付1元进行预购；</p>
+            </div>
+            <div class="coupon-desc">
+                <em>02</em>
+                <p>预购成功的用户，即有机会获得先之定制抱枕一个；</p>
+            </div>
+            <div class="coupon-desc">
+                <em>03</em>
+                <p>抱枕限量118个，只需1元即可得到；</p>
+            </div>
+            <div class="coupon-desc">
+                <em>04</em>
+                <p>该活动仅受益于酒店HR及高层，抱枕仅邮寄到对应酒店地址，每家酒店限送一个。</p>
+            </div>
+            <div class="coupon-desc">
+                <em>05</em>
+                <p>满足条件获得抱枕的用户，客服人员会与您取得联系，抱枕将尽快会为您寄出。</p>
+            </div>
+
+            <div class="footer-btn">
+                <a class="js-formInfo-btn">1元预购</a>
+                <a href="lms_coupon.html" class="back">返回</a>
+            </div>
+        </div>
+        <div class="index-intro ihma-intro">
+            <span class="js-lms">LMS企业商学院&gt;</span>
+        </div>
+    </div>
+
+    <!--填写信息框 start-->
+    <div class="formInfo-container js-formInfo-container">
+        <div class="info-top">
+            <img src="img/info_icon_03.png" alt="">
+            <span>请填写一下信息，我们将把抱枕寄到您所在的酒店~</span>
+        </div>
+        <form action="">
+            <div class="js-username"><label for="">姓名：</label><input type="text" id="username" maxlength="16" name=""><p class="error-info"></p></div>
+            <div class="js-phone"><label for="">手机：</label><input type="tel" id="phone" maxlength="11" name=""><p class="error-info"></p></div>
+            <div class="js-address"><label for="">地址：</label><input type="text" id="address" maxlength="35" placeholder="该信息为酒店地址" name=""><p class="error-info"></p></div>
+            <div class="footer-btn">
+                <button type="button" class="jscancel">取消</button>
+                <button type="button" class="js-apply">支付预购</button>
+            </div>
+        </form>
+    </div>
+    <div class="error-popup">
+        请将信息填写完整哦~
+    </div>
+    <!--填写信息 end-->
+    <!--申请结果 提示框 start-->
+    <div class="formInfo-container lms-preorder js-success">
+        <div class="success-info">
+            <h2>提交成功！</h2>
+            <p>我们将尽快安排客服与您联系。</p>
+            <div class="footer-btn">
+                <button type="button" class="btn-ok jscancel">确定</button>
+            </div>
+        </div>
+
+    </div>
+    <!--申请结果 end-->
+    <!--周年庆汇总页面主体 end-->
+    <!--cover-overlay start-->
+    <div class="cover-overlay js-cover-overlay"></div>
+    <!--cover-overlay end-->
+    <!--LMS介绍 start-->
+    <div class="ihma-container lms-container js-lms-container">
+        <h2>LMS企业商学院</h2>
+        <p>
+            LMS是酒店企业全员学习网络管理系统，156位酒店业知名人士深入研究中国酒店行业十余载，针对中国酒店发展态势和员工素质现状，结合自身多年的实践经验，整理出海量专业课程学习资源。
+            LMS打造积极的学习氛围，激发员工的学习乐趣，开发酒店企业全员学习网络管理系统，便于员工完善自身专业知识和实战技能，便于酒店开展全员管理及考核工作。
+            LMS致力于帮助酒店全员提升职业技能和工作能力，以提升酒店企业的市场竞争力。
+            截至目前，LMS已为20000多家企业建立了自己的商学院！那么，您的选择是？
+        </p>
+        <span class="close-icon js-close-icon">×</span>
+    </div>
+    <!--LMS介绍 end-->
+</section>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/lmsMain.js"></script>
+<script>
+//    $('.js-cover-overlay').show();
+//    $('.js-success').show();
+</script>
+</html>

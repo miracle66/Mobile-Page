@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <title>敬请期待</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body{
+            background: #2230AD;
+        }
+    </style>
+</head>
+<body>
+<section class="index-wrapper">
+    <!--周年庆汇总页面主体 start-->
+    <div class="index-bg">
+        <div class="index-btn start-img">
+            <div class="timer">
+                <h2>惊爆优惠倒计时</h2>
+                <img src="img/timer.png" alt="">
+                <div class="time-item">
+                    <!--<span id="day_show"></span>-->
+                    <strong id="hour_show"></strong>
+                    <strong id="minute_show"></strong>
+                    <strong id="second_show"></strong>
+                </div>
+            </div>
+
+            <div class="index-intro">
+                <span class="js-ihma">IHMA职业资格认证&gt;</span>
+                <span class="js-lms">LMS企业商学院&gt;</span>
+            </div>
+        </div>
+    </div>
+    <!--周年庆汇总页面主体 end-->
+    <!--cover-overlay start-->
+    <div class="cover-overlay js-cover-overlay"></div>
+    <!--cover-overlay end-->
+    <!--IHMA介绍 start-->
+    <div class="ihma-container js-ihma-container">
+        <h2>IHMA是什么？</h2>
+        <p>
+            IHMA是全球酒店业职业经理人互动交流的非营利性国际组织机构，以促进饭店经理人职业发展与行业繁荣为己任。IHMA会定期举办资源分享会，在提升个人价值的同时，打造属于自己的优质人脉圈，在中国已有4万余名酒店人加入IHMA。
+        </p>
+        <h2>IHMA职业资格认证是什么？</h2>
+        <p>
+            IHMA根据酒店各个岗位职责，以岗位胜任力为标准，制定了督导、经理、总监、高级四大类职业经理人认证，25款职业资格认证，对于考核通过的职业经理人颁发国际饭店业职业经理人协会认证证书。
+        </p>
+        <p>
+            调研20000多家酒店，320000余名酒店职业经理人，研究酒店数余载，更懂您的需求。
+            截止2016年5月，已有82%的学员通过IHMA职资认证获得了职位提升及薪资上升！
+        </p>
+        <span class="close-icon js-close-icon">×</span>
+    </div>
+    <!--IHMA介绍 end-->
+
+    <!--LMS介绍 start-->
+    <div class="ihma-container lms-container js-lms-container">
+        <h2>LMS企业商学院</h2>
+        <p>
+            LMS是酒店企业全员学习网络管理系统，156位酒店业知名人士深入研究中国酒店行业十余载，针对中国酒店发展态势和员工素质现状，结合自身多年的实践经验，整理出海量专业课程学习资源。
+            LMS打造积极的学习氛围，激发员工的学习乐趣，开发酒店企业全员学习网络管理系统，便于员工完善自身专业知识和实战技能，便于酒店开展全员管理及考核工作。
+            LMS致力于帮助酒店全员提升职业技能和工作能力，以提升酒店企业的市场竞争力。
+            截至目前，LMS已为20000多家企业建立了自己的商学院！那么，您的选择是？
+        </p>
+        <span class="close-icon js-close-icon">×</span>
+    </div>
+    <!--LMS介绍 end-->
+</section>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/ihmaMain.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    console.log($.cookie('the_cookie','123'));
+    var intDiff = parseInt(259200);//倒计时总秒数量
+    function timer(intDiff){
+        window.setInterval(function(){
+            var day=0,
+                    hour=0,
+                    minute=0,
+                    second=0;//时间默认值
+            if(intDiff > 0){
+//                day = Math.floor(intDiff / (60 * 60 * 24));
+                hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+                minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+                second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+            }else{
+                window.location.href = 'index.html';
+            }
+            if (minute <= 9) minute = '0' + minute;
+            if (second <= 9) second = '0' + second;
+//            $('#day_show').html(day+"天");
+            $('#hour_show').html(hour);
+            $('#minute_show').html(minute);
+            $('#second_show').html(second);
+            intDiff--;
+        }, 1000);
+    }
+    $(function(){
+        timer(intDiff);
+        console.log(intDiff);
+         // 读取 cookie );
+    });
+    $('.timer').on('click',function () {
+        console.log(intDiff);
+    })
+</script>
+</html>

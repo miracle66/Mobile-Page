@@ -1,0 +1,779 @@
+body{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a{
+    outline:none;
+    -moz-outline-style:none;
+}
+input,
+textarea {
+    border: 0; /* 方法1 */
+    -webkit-appearance: none; /* 方法2 */
+    box-shadow: none;
+}
+
+.index-wrapper{
+    padding-bottom:25px;
+    background-color: #2230AD;
+}
+
+.index-wrapper .index-bg,.ihma-wrapper .ihma-bg{
+    background:url("../img/index_bg.png") no-repeat center top;
+    background-size: 100%;
+}
+.index-wrapper .index-bg .index-btn,.ihma-wrapper .ihma-bg .index-btn{
+    padding-top: 70%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+.index-wrapper .index-bg .index-btn a,.ihma-wrapper .ihma-bg a{
+    display: block;
+}
+.index-wrapper .index-bg .index-btn img,.ihma-wrapper .ihma-bg img{
+    width:250px;
+}
+.index-wrapper .index-bg .start-img .timer{
+    position: relative;
+}
+.index-wrapper .index-bg .start-img .timer h2{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    top: 55px;
+    font-size: 25px;
+    font-weight: 100;
+}
+.index-wrapper .index-bg .start-img img{
+    width:360px;
+}
+
+.index-wrapper .index-bg .start-img .timer .time-item{
+    position: absolute;
+    width: 100%;
+    /*background: #fff;*/
+    top: 60%;
+    text-align: center;
+}
+.index-wrapper .index-bg .start-img .timer span#day_show{
+    position: absolute;
+    top: -40px;
+    left: 8%;
+    color: #E81973;
+    font-size: 20px;
+    display: block;
+    padding: 2px;
+}
+.index-wrapper .index-bg .start-img .timer .time-item h1 {
+    font-size:40px;
+    margin:20px 0;
+    border-bottom:solid 1px #ccc;
+    padding-bottom:20px;
+    letter-spacing:2px;
+}
+.index-wrapper .index-bg .start-img .timer .time-item  strong {
+    /*background:#C71C60;*/
+    color:#e81973;
+    line-height: 50px;
+    font-size: 50px;
+    padding: 0 0 0 20px;
+    margin-right: 0;
+    border-radius:5px;
+    /*box-shadow:1px 1px 3px rgba(0,0,0,0.2);*/
+    font-weight: 100;
+    letter-spacing: 17px;
+    width: 90px;
+    display: inline-block;
+    text-align: right;
+}
+.index-wrapper .index-bg .start-img .timer .time-desc{
+    position: absolute;
+    bottom:-20px;
+    width:100%;
+    color: #ffffff;
+}
+.index-wrapper .index-bg .start-img .timer .time-desc span{
+    width:32.3%;
+    display: inline-block;
+}
+
+.index-wrapper .index-bg .index-intro{
+    text-align: center;
+    display: block;
+    margin: 25% 15px;
+}
+.index-intro span{
+    text-decoration: underline;
+    color: #ffffff;
+    font-size:14px;
+    cursor: pointer;
+}
+.index-wrapper .index-bg .index-intro span:first-child{
+    float: left;
+}
+.index-wrapper .index-bg .index-intro span:last-child{
+    float: right;
+}
+
+/*遮罩层*/
+.cover-overlay{
+    position: fixed;
+    background:rgba(0,0,0,0.6);
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:1000;
+    display: none;
+}
+/*IHMA介绍*/
+.ihma-container{
+    position: absolute;
+    top:8%;
+    background: #ffffff;
+    border-radius: 5px;
+    z-index:1001;
+    width:80%;
+    padding:20px 5%;
+    left:5%;
+    display: none;
+}
+.ihma-container h2{
+    display: block;
+    background: url("../img/intro_IHMA_bg.png") no-repeat center top;
+    background-size: contain;
+    text-align: center;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+}
+.ihma-container p{
+    text-align: justify;
+    line-height: 23px;
+    color: #333;
+    margin:5px 0;
+}
+.ihma-container .close-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid #ffffff;
+    background: transparent;
+    display: inline-block;
+    position: absolute;
+    bottom: -40px;
+    left: 45%;
+    color: #fff;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 1003;
+    cursor: pointer;
+}
+
+.lms-container h2{
+    background: url("../img/intro_LMS_bg.png") no-repeat center top;
+    background-size:100%;
+}
+
+
+.ihma-wrapper .ihma-bg{
+    background:url("../img/ihma_bg_02.png") no-repeat center top;
+    background-size: 100%;
+}
+.ihma-wrapper .ihma-bg .index-btn{
+    padding-top:80%;
+}
+.ihma-wrapper .ihma-bg .index-btn a,.ihma-wrapper .ihma-bg .index-btn img{
+    padding-bottom: 20px;
+}
+.ihma-wrapper .ihma-bg .index-btn img:first-child{
+    width:268px;
+}
+.coupon-wrapper .ihma-bg{
+    background:url("../img/ihma_coupon_bg_02.png") no-repeat center top;
+    background-size: 100%;
+    text-align: center;
+    padding: 15% 20px 10% 20px;
+}
+.coupon-wrapper .ihma-bg img{
+    width:92%;
+    padding-bottom: 20px;
+}
+.coupon-wrapper .ihma-bg .coupon-container{
+    background: url("../img/coupon_item_bg.png") no-repeat center top;
+    background-size: 100% 100%;
+    /* height: 115px; */
+    line-height: 80px;
+    margin:5px 0;
+}
+
+.coupon-wrapper .ihma-bg .coupon-container .coupon-detail{
+    margin-left:90px;
+    line-height: 30px;
+    height: 113px;
+    padding-top: 12px;
+    text-align: left;
+}
+.coupon-wrapper .ihma-bg .coupon-container img{
+    width: 80px;
+    float: left;
+    margin: 20px 7% 0 7%;
+}
+.coupon-wrapper .ihma-bg .coupon-container .coupon-detail p{
+    font-size: 15px;
+    color: #333;
+    padding:0 8px 0 0;
+}
+.coupon-wrapper .ihma-bg .coupon-container .coupon-detail h2{
+    color: #f23632;
+    font-size: 16px;
+}
+.coupon-wrapper .ihma-bg .coupon-container .coupon-detail a,.coupon-wrapper .ihma-bg .lms-coupon-bottom .lms-coupon-new a,.footer-btn a{
+    background: #f44135;
+    font-weight: 800;
+    color: #ffed3a;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    padding: 0 15px;
+    margin-top: 5px;
+    display: inline-block;
+    /*height: 33px;*/
+    line-height: 33px;
+    cursor: pointer;
+}
+.coupon-wrapper .ihma-bg .coupon-container .coupon-detail label{
+    color: #f23632;
+    font-size:18px;
+    font-weight:800;
+}
+.coupon-wrapper .ihma-bg .half-coupon{
+    background: url("../img/coupon_halfitem_bg.png") no-repeat center top;
+    background-size: 100% 100%;
+}
+.coupon-wrapper .ihma-intro{
+    margin-top:20px;
+}
+
+.remark-desc{
+    text-align: left;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+.free-container{
+    display: block;
+    margin:5% 0;
+    position: relative;
+    width: auto;
+    border:3px solid rgba(183, 157, 157, 0.2);
+    left: 0;
+    z-index:inherit;
+}
+.coupon-wrapper .ihma-bg .free-container img{
+    width: 100px;
+}
+.free-container h2{
+    margin-bottom:10px;
+    font-weight:100;
+}
+.free-container .coupon-desc{
+    padding-left: 25px;
+    position: relative;
+}
+.free-container p{
+    /*margin:0;*/
+}
+.free-container .coupon-desc p a{
+    color: #f23632;
+    position: relative;
+}
+.free-container .coupon-desc p a b.right-arrow{
+    border: 6px solid transparent;
+    border-left-color: #f00;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 3px;
+    right: -15px;
+}
+.free-container .coupon-desc em{
+    font-style: normal;
+    background: #ff2233;
+    color: #ffffff;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    padding: 1px;
+    margin-right: 5px;
+    position: absolute;
+    left: -3px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    top: 3px;
+    font-size: 12px;
+}
+.footer-btn button{
+    background: #f44135;
+    font-weight: 800;
+    color: #ffffff;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    padding: 12px 0;
+    margin-top: 5px;
+    width: 48%;
+}
+
+.footer-btn button:nth-child(2){
+    background: #e8e8e8;
+    color: #999999;
+}
+.footer-btn span{
+    display: block;
+    float: left;
+    color: #f23632;
+    text-align: left;
+    margin-top: 5px;
+    line-height: 20px;
+}
+.footer-btn span s{
+    color: #cccccc;
+}
+.footer-btn span b{
+    font-size: 16px;
+}
+.footer-btn a {
+    height: 35px;
+    line-height: 35px;
+    width: 33%;
+    color: #fff;
+}
+.footer-btn a.back{
+    background: #e8e8e8;
+    color: #999999;
+}
+.num-signup{
+    text-align: right;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    color: #fff;
+}
+.num-signup b{
+    font-size: 18px;
+    color: #ffed3a;
+}
+
+.formInfo-container{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 1002;
+    top: 23%;
+    background: #fff;
+    display: none;
+}
+.formInfo-container .info-top{
+    background:#f23632;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 72px;
+    border-bottom-left-radius: initial;
+    border-bottom-right-radius: initial;
+}
+.formInfo-container .info-top img{
+    width:90px;
+    float: left;
+}
+.formInfo-container .info-top span{
+    color: #ffffff;
+    margin-left: 90px;
+    display: block;
+    line-height: 20px;
+    text-align: left;
+    padding: 10px 5px;
+}
+
+.formInfo-container form{
+    padding: 20px;
+}
+.formInfo-container form div{
+    position: relative;
+    text-align: center;
+}
+.formInfo-container form div button{
+    width:48%;
+}
+.formInfo-container form label{
+    position: absolute;
+    top:20px;
+}
+.formInfo-container form input{
+    /*height: 36px;*/
+    /*line-height: 36px;*/
+    padding:12px 0;
+    border: 1px solid #ccc;
+    margin: 10px 0 10px 20%;
+    width:80%;
+    text-indent:10px;
+}
+.formInfo-container form input.error{
+    border: 1px solid #f23632;
+}
+.formInfo-container form p{
+    color: #f23632;
+    text-align: left;
+    margin-left: 20%;
+    display: none;
+}
+input[placeholder], [placeholder], *[placeholder] {
+    /*padding-left:10px;*/
+}
+.formInfo-container .footer-btn button:nth-child(1){
+    background: #e8e8e8;
+    color: #999999;
+}
+.formInfo-container .footer-btn button:nth-child(2){
+    background: #f44135;
+    color: #ffffff;
+}
+
+/*报名成功提示*/
+.success-info{
+    background: #f23632 url("../img/success_bg_03.png") no-repeat center top;
+    background-size: 100%;
+    padding: 40px 20px 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+.success-info b{
+    color: #ffed3a;
+}
+.success-info .footer-btn button.btn-ok{
+    background: #ffed3a;
+    color: #f23632;
+}
+
+/*预购结果提示*/
+.preorder .success-info{
+    background: #f23632;
+    padding: 20px;
+}
+
+.lms-preorder .success-info{
+    background: #0cc1f6;
+    font-size: 15px;
+}
+.lms-preorder .success-info button.btn-ok{
+    background: #ffffff;
+    color: #0cc1f6;
+}
+
+/*错误提示*/
+.error-popup{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 5px;
+    position: absolute;
+    top: 45%;
+    width: 50%;
+    left: 25%;
+    z-index: 1005;
+    color: #fff;
+    background: rgba(0,0,0,.6);
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: none;
+}
+
+
+/*LMS*/
+.lms-wrapper .ihma-bg{
+    background: url("../img/lms_bg_02.png") no-repeat center top;
+    background-size: 100%;
+}
+.lms-coupon .ihma-bg{
+    background: url("../img/lms_coupon_bg.png") no-repeat center top;
+    background-size: 100%;
+}
+.lms-coupon .ihma-bg .coupon-container{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;;
+    background: #ffffff;
+    border: 3px solid rgba(181, 181, 181, 0.2);
+}
+.lms-coupon .ihma-bg .coupon-container .coupon-detail a,.lms-coupon .ihma-bg .lms-coupon-bottom .lms-coupon-new a{
+    background:#fbe328;
+    color: #f23632;
+}
+.lms-coupon .ihma-bg .coupon-container img{
+    /*margin:0;*/
+}
+.lms-coupon-bottom{
+
+}
+.lms-coupon-bottom .lms-coupon-new{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #ffffff;
+    border: 3px solid rgba(181, 181, 181, 0.2);
+    width: 43%;
+    display: inline-block;
+    margin:0 1px;
+    line-height: 23px;
+    padding: 35px 2%;
+    height: 250px;
+    position: relative;
+}
+.lms-coupon-bottom .lms-coupon-new span {
+    display: block;
+    height: 60px;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    line-height: 60px;
+    font-size: 14px;
+    /* padding: 0 10%; */
+    font-weight: 800;
+    left: -3px;
+    top: 0;
+    width: 60px;
+}
+.lms-coupon-bottom .lms-coupon-new span.lms-newuser {
+    background: url("../img/lms_coupon_new.png") no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+.lms-coupon-bottom .lms-coupon-old span.lms-newuser{
+    background: url("../img/lms_coupon_old.png") no-repeat center top;
+    background-size: contain;
+}
+.lms-coupon-bottom .lms-coupon-new p{
+    text-align: left;
+    font-size: 15px;
+    /* padding: 0 5px; */
+}
+.lms-coupon .ihma-bg .lms-coupon-bottom .lms-coupon-new a{
+    margin-top: 35px;
+}
+.lms-coupon .ihma-bg .lms-coupon-bottom .lms-coupon-old a{
+    margin-top: 12px;
+}
+.lms-coupon-bottom .lms-coupon-new p.lms-desc{
+    color: #f23632;
+    font-size: 16px;
+    font-weight: 800;
+}
+.lms-coupon-bottom .lms-coupon-new p.lms-desc i{
+    font-size: 13px;
+    font-style: normal;
+}
+.lms-coupon-bottom .lms-coupon-new:nth-child(1){
+    float: left;
+}
+.lms-coupon-bottom .lms-coupon-new:nth-child(2){
+    float: right;
+}
+.lms-coupon-bottom .lms-coupon-new img{
+    width: 125px;
+}
+
+.lms-coupon .ihma-container h2{
+    background: url("../img/intro_LMS_bg.png") no-repeat center top;
+    background-size: contain;
+}
+.lms-coupon .free-container .coupon-desc em{
+    background: #0cc1f5;
+}
+.lms-coupon .info-top{
+    background-color: #0cc1f5;
+}
+.lms-coupon .formInfo-container .footer-btn button[type=submit]{
+    background: #0cc1f5;
+}
+.lms-coupon .old-free h2{
+    font-size: 15px;
+}
+.lms-coupon .old-free h2 i:nth-child(1){
+    font-style: normal;
+    font-size: 12px;
+}
+.lms-coupon .old-free h2 i:nth-child(2){
+    color: #ffed3a;
+    font-style: normal;
+}
+
+.lms-coupon .more-surprise{
+    background: transparent;
+    border:1px solid #4097e2;
+    text-align: left;
+    padding: 10px;
+    color: #ffffff;
+    position: relative;
+    margin:15% 0 5% 0;
+}
+.lms-coupon .more-surprise .more-title{
+    position: absolute;
+    background: url("../img/more_title.png") no-repeat 0 0;
+    background-size: contain;
+    height: 30px;
+    /*padding: 0 5%;*/
+    width: 100px;
+    left: 0;
+    color: #2589de;
+    text-align: center;
+    line-height: 30px;
+    top: -30px;
+}
+.lms-coupon .more-surprise p{
+    line-height: 23px;
+}
+.lms-coupon .more-surprise p:nth-child(2){
+    color: #ffed3a;
+}
+/*LMS*/
+
+/*媒体查询 兼容处理*/
+@media screen and (max-width: 750px){/*++*/
+    .index-wrapper{
+        padding-bottom:25px;
+        background-color: #2230AD;
+    }
+
+    .coupon-wrapper .ihma-bg .coupon-container .coupon-detail{
+        margin-left: 20%;
+        line-height: 30px;
+        height: 113px;
+        padding-top: 12px;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 414px) {/*iphone6 plus*/
+    .index-wrapper{
+        padding-bottom:93px;
+        background-color: #2230AD;
+    }
+
+    .coupon-wrapper .ihma-bg .coupon-container .coupon-detail{
+        margin-left:90px;
+        line-height: 30px;
+        height: 113px;
+        padding-top: 12px;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 375px) { /*iphone6*/
+    .index-wrapper{
+        padding-bottom:25px;
+        background-color: #2230AD;
+    }
+
+    .coupon-wrapper .ihma-bg .coupon-container .coupon-detail{
+        margin-left:90px;
+        line-height: 30px;
+        height: 98px;
+        padding-top: 10px;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+}
+@media screen  and (max-width: 320px) { /*iphone4 iphone5*/
+
+    .coupon-wrapper .ihma-bg .coupon-container .coupon-detail {
+        margin-left: 90px;
+        line-height: 23px;
+        height: 95px;
+        text-align: left;
+    }
+
+    .coupon-wrapper .ihma-bg .coupon-container img {
+        width: 70px;
+        float: left;
+        margin: 13px 13px 0 10px;
+    }
+
+    .coupon-wrapper .ihma-bg .coupon-container .coupon-detail p{
+        font-size: 13px;
+        color: #333;
+    }
+
+    .free-container h2 {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .ihma-container h2{
+        height:30px;
+        line-height: 30px;
+    }
+
+    .coupon-wrapper .ihma-bg .coupon-container{
+        height:100px;
+    }
+
+    .lms-coupon-bottom .lms-coupon-new p {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .lms-coupon-bottom .lms-coupon-new p.lms-desc{
+        color: #f23632;
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .coupon-wrapper .ihma-bg {
+        padding: 15% 15px 10% 15px;
+    }
+
+    .lms-coupon .old-free h2.h2-old-free {
+        font-size: 12px;
+    }
+
+    .lms-coupon .free-container h2{
+        font-size: 15px;
+    }
+
+    .index-wrapper .index-bg .start-img .timer h2{
+        top: 45px;
+        font-size: 20px;
+    }
+
+    /*倒计时*/
+    .index-wrapper .index-bg .start-img .timer .time-item{
+        top:55%;
+    }
+    .index-wrapper .index-bg .start-img .timer .time-item  strong {
+        color:#e81973;
+        line-height: 50px;
+        font-size: 35px;
+        padding: 0 0 0 15px;
+        margin-right: 0;
+        border-radius:5px;
+        font-weight: 100;
+        letter-spacing: 15px;
+    }
+    .index-wrapper .index-bg .start-img img{
+        width:280px;
+    }
+
+    .index-wrapper .index-bg .start-img .timer .time-item  strong {
+        width: 70px;
+    }
+
+}
+
